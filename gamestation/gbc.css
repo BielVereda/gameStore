@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A1F3D;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh; 
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #1e2a47;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+header nav {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header a:hover {
+    background-color: #5a7b94;
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: rgb(255, 255, 255);
+    padding: 0.3em;
+    color: black;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.sistema {
+    flex-basis: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.sistema h2 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.emulator-block, .myboy-block, .johngba-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinhando o conteúdo centralizado verticalmente */
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(161, 161, 161, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.emulator-block h2, .myboy-block h2, .johngba-block h2 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: center; /* Garantir que o título esteja centralizado */
+    margin-left: 0;
+}
+
+.emulator img, .myboy img, .johngba img {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.game {
+    background-color: rgba(161, 161, 161, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.game:hover {
+    transform: scale(1.05);
+    background-color: blue;
+}
+
+.game img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.game h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.jogos {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    background-color: #504f4f;
+    padding: 1em;
+    border-radius: 8px;
+    font-size: larger;
+}
+
+.sistema h2 {
+    background-color: #504f4f;
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 2em;
+    padding: 10px 0;
+    background-color: #1e2a47;
+    color: white;
+    z-index: 1;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adicionando Media Queries para Responsividade */
+
+/* Para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 0.5em;
+    }
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .emulator-block, .myboy-block, .johngba-block {
+        width: 90%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .game {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .game img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Para telas médias (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .main-container {
+        gap: 1em;
+    }
+
+    .container {
+        gap: 10px;
+    }
+
+    .game {
+        width: 45%;
+    }
+
+    .game img {
+        width: 100%;
+        height: auto;
+    }
+}
